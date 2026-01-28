@@ -1,0 +1,26 @@
+# Sensitive data
+*.pem
+*.key
+*.env
+.envrc
+secrets.*
+
+# User-specific
+**/.local
+**/.cache
+
+# Backup directories
+.dotfiles.backup.*
+
+# Temporary files
+*.swp
+*.swo
+*~
+.DS_Store
+
+# IDE
+.vscode/
+.idea/
+
+# Lock files (may contain sensitive info)
+**/lazy-lock.json
