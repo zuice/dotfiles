@@ -5,17 +5,20 @@ Personal configuration files for development tools.
 ## Setup on a new computer
 
 1. Clone the repo:
+
    ```bash
    git clone <your-repo-url> ~/dev/dotfiles
    cd ~/dev/dotfiles
    ```
 
 2. Run setup (installs fonts and other dependencies):
+
    ```bash
    ./setup.sh
    ```
 
 3. Install dotfiles (backs up existing configs and creates symlinks):
+
    ```bash
    ./install.sh
    ```
