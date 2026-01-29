@@ -2,3 +2,6 @@
 	defaultBranch = main
 [core]
 	editor = nvim
+[user]
+	email = me@jeffa.dev
+	name = zuice

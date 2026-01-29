@@ -15,6 +15,16 @@ return {
 				require("none-ls.diagnostics.eslint"),
 			},
 			on_attach = function(client, bufnr)
+				vim.keymap.set("n", "gd", vim.lsp.buf.definition, { buffer = bufnr, desc = "Go to definition" })
+				vim.keymap.set("n", "gv", function()
+					vim.cmd([[ vsplit ]])
+					vim.lsp.buf.definition()
+				end, { buffer = bufnr, desc = "Go to definition (vsplit)" })
+				vim.keymap.set("n", "gD", function()
+					vim.cmd([[ tabnew ]])
+					vim.lsp.buf.definition()
+				end, { buffer = bufnr, desc = "Go to definition (new tab)" })
+
 				if client.supports_method("textDocument/formatting") then
 					vim.api.nvim_clear_autocmds({ group = augroup, buffer = bufnr })
 					vim.api.nvim_create_autocmd("BufWritePre", {

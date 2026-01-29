@@ -10,4 +10,4 @@ vim.o.swapfile = false
 vim.o.backup = false
 vim.o.undofile = true
 vim.o.updatetime = 300
-vim.opt.wrap = false
+vim.o.wrap = false
