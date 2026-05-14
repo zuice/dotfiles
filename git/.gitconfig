@@ -5,3 +5,5 @@
 [user]
 	email = me@jeffa.dev
 	name = zuice
+[pull]
+	rebase = true

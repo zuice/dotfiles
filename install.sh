@@ -25,7 +25,10 @@ backup_and_link() {
 # Zsh
 echo "Installing Zsh configs..."
 backup_and_link ~/.zshrc "$DOTFILES/zsh/.zshrc"
-backup_and_link ~/.p10k.zsh "$DOTFILES/zsh/.p10k.zsh"
+
+# Starship
+echo "Installing Starship config..."
+backup_and_link ~/.config/starship.toml "$DOTFILES/other/starship/starship.toml"
 
 # Neovim
 echo "Installing Neovim config..."
@@ -39,6 +42,16 @@ backup_and_link ~/.config/git/ignore "$DOTFILES/git/ignore"
 # Ghostty
 echo "Installing Ghostty config..."
 backup_and_link ~/.config/ghostty/config "$DOTFILES/other/ghostty/config"
+
+# Hyprland
+if command -v Hyprland &>/dev/null; then
+  echo "Installing Hyprland configs..."
+  backup_and_link ~/.config/hypr/hyprland.conf "$DOTFILES/other/hypr/hyprland.conf"
+  backup_and_link ~/.config/hypr/hyprlock.conf "$DOTFILES/other/hypr/hyprlock.conf"
+  backup_and_link ~/.config/hypr/hypridle.conf "$DOTFILES/other/hypr/hypridle.conf"
+else
+  echo "Skipping Hyprland configs (not installed)"
+fi
 
 echo ""
 echo "✓ Dotfiles installed successfully!"

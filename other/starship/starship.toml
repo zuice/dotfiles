@@ -1,0 +1,128 @@
+format = """
+[](bold #fab387)\
+$os\
+[](bold #f9e2af)\
+$directory\
+[](bold #45475a)\
+$git_branch\
+$git_status\
+$git_state\
+$fill\
+$nodejs\
+$python\
+$rust\
+$golang\
+$java\
+$lua\
+$bun\
+$cmd_duration\
+$line_break\
+$character"""
+
+right_format = """$time"""
+
+[os]
+disabled = false
+style = "bold #fab387"
+format = "[ $symbol ]($style)"
+
+[os.symbols]
+Arch = "󰣇"
+Linux = ""
+Macos = "󰀵"
+
+[character]
+success_symbol = "[  ❯](bold #fab387)"
+error_symbol = "[  ❯](bold #f38ba8)"
+vimcmd_symbol = "[  ❮](bold #a6e3a1)"
+
+[directory]
+style = "bold #f9e2af"
+truncation_length = 1
+fish_style_pwd_dir_length = 1
+format = "[ $path ]($style)[$read_only]($read_only_style)"
+read_only = " 󰌾"
+read_only_style = "bold #f38ba8"
+
+[git_branch]
+style = "bold #cba6f7"
+symbol = "󰊢"
+format = "[ $symbol $branch]($style)"
+
+[git_status]
+style = "bold #94e2d5"
+format = '([$all_status$ahead_behind]($style))'
+conflicted = " =${count}"
+ahead = " ⇡${count}"
+behind = " ⇣${count}"
+diverged = " ⇕"
+untracked = " ?"
+stashed = " ●"
+modified = " !"
+staged = " +"
+renamed = " »"
+deleted = " ✘"
+
+[git_state]
+style = "bold #f9e2af"
+format = ' \([$state( $progress_current/$progress_total)]($style)\)'
+
+[fill]
+symbol = " "
+
+[nodejs]
+style = "bold #89b4fa"
+symbol = "󰎙"
+version_format = "${major}.${minor}"
+format = "[ $symbol $version]($style)"
+
+[python]
+style = "bold #a6e3a1"
+symbol = "󰌠"
+version_format = "${major}.${minor}"
+format = '[ $symbol ${version}(\($virtualenv\))]($style)'
+
+[rust]
+style = "bold #fab387"
+symbol = "󱘗"
+version_format = "${major}.${minor}"
+format = "[ $symbol $version]($style)"
+
+[golang]
+style = "bold #89dceb"
+symbol = "󰟓"
+version_format = "${major}.${minor}"
+format = "[ $symbol $version]($style)"
+
+[java]
+style = "bold #f38ba8"
+symbol = "󰬷"
+version_format = "${major}"
+format = "[ $symbol $version]($style)"
+
+[lua]
+style = "bold #74c7ec"
+symbol = "󰢱"
+version_format = "${major}.${minor}"
+format = "[ $symbol $version]($style)"
+
+[bun]
+style = "bold #f5c2e7"
+symbol = "󰚩"
+version_format = "${major}.${minor}"
+format = "[ $symbol $version]($style)"
+
+[cmd_duration]
+style = "bold #7f849c"
+format = "[ $duration]($style)"
+min_time = 3_000
+show_milliseconds = false
+
+[time]
+disabled = false
+style = "bold #585b70"
+format = "[ $time]($style)"
+time_format = "%I:%M %p"
+
+[line_break]
+disabled = false
