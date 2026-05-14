@@ -22,28 +22,49 @@ backup_and_link() {
   ln -sf "$source" "$target"
 }
 
-# Zsh
+install_packages() {
+  if [ ! -f /etc/arch-release ]; then
+    echo "Auto-install only supported on Arch Linux. Install packages manually."
+    return 1
+  fi
+
+  local pkgs=()
+
+  while IFS= read -r pkg; do
+    if ! pacman -Q "$pkg" &>/dev/null; then
+      pkgs+=("$pkg")
+    fi
+  done <<< "$1"
+
+  if [ ${#pkgs[@]} -gt 0 ]; then
+    echo "Installing packages: ${pkgs[*]}"
+    sudo pacman -S --noconfirm --needed "${pkgs[@]}"
+  fi
+}
+
+# ── Shared packages ──
+SHARED_PKGS="starship neovim git"
+
+echo ""
+echo "Checking shared packages..."
+install_packages "$SHARED_PKGS"
+
+# ── Link shared configs ──
+echo ""
 echo "Installing Zsh configs..."
 backup_and_link ~/.zshrc "$DOTFILES/zsh/.zshrc"
 
-# Starship
-if command -v starship &>/dev/null; then
-  echo "Installing Starship config..."
-  backup_and_link ~/.config/starship.toml "$DOTFILES/other/starship/starship.toml"
-else
-  echo "Skipping Starship config (not installed)"
-fi
+echo "Installing Starship config..."
+backup_and_link ~/.config/starship.toml "$DOTFILES/other/starship/starship.toml"
 
-# Neovim
 echo "Installing Neovim config..."
 backup_and_link ~/.config/nvim "$DOTFILES/nvim"
 
-# Git
 echo "Installing Git configs..."
 backup_and_link ~/.gitconfig "$DOTFILES/git/.gitconfig"
 backup_and_link ~/.config/git/ignore "$DOTFILES/git/ignore"
 
-# Ghostty
+# ── Ghostty ──
 if command -v ghostty &>/dev/null; then
   echo "Installing Ghostty config..."
   backup_and_link ~/.config/ghostty/config "$DOTFILES/other/ghostty/config"
@@ -51,25 +72,34 @@ else
   echo "Skipping Ghostty config (not installed)"
 fi
 
-# Hyprland
+# ── Hyprland ──
+HYPRLAND_PKGS="hyprland hyprlock hypridle waybar rofi swaybg swaync wl-clipboard cliphist polkit-kde-agent blueman udiskie brightnessctl playerctl wireplumber grim slurp ttf-firacode-nerd"
+
+echo ""
 if command -v Hyprland &>/dev/null; then
+  HAS_HYPRLAND=true
+else
+  read -p "Install Hyprland and related packages? [y/N] " install_hypr
+  if [[ $install_hypr =~ ^[Yy]$ ]]; then
+    HAS_HYPRLAND=true
+  else
+    HAS_HYPRLAND=false
+    echo "Skipping Hyprland configs"
+  fi
+fi
+
+if [ "$HAS_HYPRLAND" = true ]; then
+  echo "Checking Hyprland packages..."
+  install_packages "$HYPRLAND_PKGS"
+
+  echo ""
   echo "Installing Hyprland configs..."
   backup_and_link ~/.config/hypr/hyprland.conf "$DOTFILES/other/hypr/hyprland.conf"
   backup_and_link ~/.config/hypr/hyprlock.conf "$DOTFILES/other/hypr/hyprlock.conf"
   backup_and_link ~/.config/hypr/hypridle.conf "$DOTFILES/other/hypr/hypridle.conf"
   backup_and_link ~/.config/hypr/assets "$DOTFILES/other/hypr/assets"
-
-  if command -v waybar &>/dev/null; then
-    echo "Installing Waybar config..."
-    backup_and_link ~/.config/waybar "$DOTFILES/other/waybar"
-  fi
-
-  if command -v rofi &>/dev/null; then
-    echo "Installing Rofi config..."
-    backup_and_link ~/.config/rofi "$DOTFILES/other/rofi"
-  fi
-else
-  echo "Skipping Hyprland configs (not installed)"
+  backup_and_link ~/.config/waybar "$DOTFILES/other/waybar"
+  backup_and_link ~/.config/rofi "$DOTFILES/other/rofi"
 fi
 
 echo ""
