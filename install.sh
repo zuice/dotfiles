@@ -27,8 +27,12 @@ echo "Installing Zsh configs..."
 backup_and_link ~/.zshrc "$DOTFILES/zsh/.zshrc"
 
 # Starship
-echo "Installing Starship config..."
-backup_and_link ~/.config/starship.toml "$DOTFILES/other/starship/starship.toml"
+if command -v starship &>/dev/null; then
+  echo "Installing Starship config..."
+  backup_and_link ~/.config/starship.toml "$DOTFILES/other/starship/starship.toml"
+else
+  echo "Skipping Starship config (not installed)"
+fi
 
 # Neovim
 echo "Installing Neovim config..."
@@ -40,8 +44,12 @@ backup_and_link ~/.gitconfig "$DOTFILES/git/.gitconfig"
 backup_and_link ~/.config/git/ignore "$DOTFILES/git/ignore"
 
 # Ghostty
-echo "Installing Ghostty config..."
-backup_and_link ~/.config/ghostty/config "$DOTFILES/other/ghostty/config"
+if command -v ghostty &>/dev/null; then
+  echo "Installing Ghostty config..."
+  backup_and_link ~/.config/ghostty/config "$DOTFILES/other/ghostty/config"
+else
+  echo "Skipping Ghostty config (not installed)"
+fi
 
 # Hyprland
 if command -v Hyprland &>/dev/null; then
@@ -49,6 +57,7 @@ if command -v Hyprland &>/dev/null; then
   backup_and_link ~/.config/hypr/hyprland.conf "$DOTFILES/other/hypr/hyprland.conf"
   backup_and_link ~/.config/hypr/hyprlock.conf "$DOTFILES/other/hypr/hyprlock.conf"
   backup_and_link ~/.config/hypr/hypridle.conf "$DOTFILES/other/hypr/hypridle.conf"
+  backup_and_link ~/.config/hypr/assets "$DOTFILES/other/hypr/assets"
 else
   echo "Skipping Hyprland configs (not installed)"
 fi
