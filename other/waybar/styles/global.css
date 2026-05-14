@@ -1,0 +1,39 @@
+* {
+	color: @main-fg;
+	font-family: "Commit Mono Nerd Font";
+	font-weight: bold;
+	font-size: 13px;
+}
+
+#waybar {
+	background-color: transparent;
+}
+
+#waybar > box {
+	background-color: alpha(@base, 0.9);
+	border: 1px solid alpha(@surface1, 0.12);
+	border-radius: 16px;
+	margin: 10px 16px;
+	padding: 0 10px;
+}
+
+button {
+	border-radius: 8px;
+	min-width: 16px;
+	padding: 0 8px;
+}
+
+button:hover {
+	background-color: alpha(@surface0, 0.25);
+	color: @text;
+}
+
+tooltip {
+	border: 1px solid alpha(@surface0, 0.3);
+	border-radius: 10px;
+	background-color: @crust;
+}
+
+tooltip > box {
+	padding: 4px 8px;
+}

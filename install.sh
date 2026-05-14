@@ -58,6 +58,16 @@ if command -v Hyprland &>/dev/null; then
   backup_and_link ~/.config/hypr/hyprlock.conf "$DOTFILES/other/hypr/hyprlock.conf"
   backup_and_link ~/.config/hypr/hypridle.conf "$DOTFILES/other/hypr/hypridle.conf"
   backup_and_link ~/.config/hypr/assets "$DOTFILES/other/hypr/assets"
+
+  if command -v waybar &>/dev/null; then
+    echo "Installing Waybar config..."
+    backup_and_link ~/.config/waybar "$DOTFILES/other/waybar"
+  fi
+
+  if command -v rofi &>/dev/null; then
+    echo "Installing Rofi config..."
+    backup_and_link ~/.config/rofi "$DOTFILES/other/rofi"
+  fi
 else
   echo "Skipping Hyprland configs (not installed)"
 fi

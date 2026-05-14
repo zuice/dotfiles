@@ -1,0 +1,6 @@
+#clock.time {
+	padding: 0 32px;
+	color: @text;
+	font-weight: bold;
+	font-size: 14px;
+}

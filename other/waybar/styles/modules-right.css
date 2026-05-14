@@ -1,0 +1,40 @@
+#network {
+	padding: 0 14px;
+	color: @subtext1;
+	font-size: 16px;
+	transition: all 200ms ease-in-out;
+}
+
+#network:hover {
+	color: @text;
+}
+
+#pulseaudio {
+	padding: 0 14px;
+	color: @subtext1;
+	font-size: 14px;
+	border-left: 1px solid alpha(@surface1, 0.2);
+	transition: all 200ms ease-in-out;
+}
+
+#pulseaudio:hover {
+	color: @text;
+}
+
+#battery {
+	padding: 0 14px;
+	color: @subtext1;
+	font-size: 14px;
+	border-left: 1px solid alpha(@surface1, 0.2);
+	transition: all 200ms ease-in-out;
+}
+
+#battery:hover {
+	color: @text;
+}
+
+#tray {
+	padding: 0 14px 0 14px;
+	margin-right: 4px;
+	border-left: 1px solid alpha(@surface1, 0.2);
+}

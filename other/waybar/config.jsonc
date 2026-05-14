@@ -1,0 +1,33 @@
+{
+	"include": [
+		"~/.config/waybar/modules/hyprland/workspaces.jsonc",
+		"~/.config/waybar/modules/hyprland/window.jsonc",
+		"~/.config/waybar/modules/clock.jsonc",
+		"~/.config/waybar/modules/pulseaudio.jsonc",
+		"~/.config/waybar/modules/battery.jsonc",
+		"~/.config/waybar/modules/network.jsonc",
+		"~/.config/waybar/modules/extras/tray.jsonc"
+	],
+
+	"modules-left": [
+		"hyprland/workspaces",
+		"hyprland/window"
+	],
+	"modules-center": [
+		"clock#time"
+	],
+	"modules-right": [
+		"network",
+		"pulseaudio#output",
+		"battery",
+		"tray"
+	],
+
+	"layer": "top",
+	"height": 0,
+	"width": 0,
+	"margin": 0,
+	"spacing": 0,
+	"mode": "dock",
+	"reload_style_on_change": true
+}

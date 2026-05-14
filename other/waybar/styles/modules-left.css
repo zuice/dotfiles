@@ -1,0 +1,27 @@
+#workspaces {
+	margin-left: 4px;
+	padding: 0 4px;
+}
+
+#workspaces button {
+	padding: 0 6px;
+	border-radius: 8px;
+	color: @overlay0;
+	transition: all 200ms ease-in-out;
+}
+
+#workspaces button:hover {
+	color: @subtext1;
+	background-color: alpha(@surface0, 0.2);
+}
+
+#workspaces button.active {
+	color: @lavender;
+	background-color: alpha(@lavender, 0.1);
+}
+
+#window {
+	padding: 0 14px;
+	color: @subtext0;
+	font-weight: normal;
+}

@@ -1,0 +1,96 @@
+configuration {
+    modi: "drun";
+    font: "Commit Mono Nerd Font 13";
+    show-icons: true;
+    icon-theme: "Papirus-Dark";
+    drun-display-format: "{name}";
+    display-drun: " Apps ";
+}
+
+@theme "/dev/null"
+
+* {
+    bg: #11111b;
+    bg-alt: #181825;
+    fg: #cdd6f4;
+    fg-alt: #a6adc8;
+    fg-dim: #6c7086;
+    accent: #b4befe;
+    border: #313244;
+    selected: #313244;
+    urgent: #f38ba8;
+
+    background-color: transparent;
+    text-color: @fg;
+    border-color: @border;
+
+    margin: 0;
+    padding: 0;
+    spacing: 0;
+}
+
+window {
+    location: center;
+    width: 520px;
+    border-radius: 16px;
+    padding: 20px;
+    background-color: @bg;
+    border: 1px;
+    border-color: @border;
+}
+
+inputbar {
+    padding: 14px 16px;
+    border-radius: 12px;
+    background-color: @bg-alt;
+    border: 1px;
+    border-color: @border;
+    children: [prompt, entry];
+}
+
+prompt {
+    text-color: @accent;
+    margin: 0 10px 0 0;
+}
+
+entry {
+    text-color: @fg;
+    placeholder-color: @fg-dim;
+    placeholder: "Search...";
+}
+
+listview {
+    margin: 14px 0 0 0;
+    lines: 8;
+    columns: 1;
+    fixed-height: false;
+    border-radius: 12px;
+}
+
+element {
+    padding: 10px 12px;
+    border-radius: 10px;
+    spacing: 10px;
+}
+
+element-icon {
+    size: 22px;
+    vertical-align: 0.5;
+}
+
+element-text {
+    vertical-align: 0.5;
+    text-color: @fg;
+}
+
+element selected {
+    background-color: @selected;
+}
+
+element selected element-text {
+    text-color: @accent;
+}
+
+element urgent {
+    text-color: @urgent;
+}
