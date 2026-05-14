@@ -1,31 +1,15 @@
 {
 	"memory": {
-		"interval": 10,
+		"interval": 5,
 		"format": "󰘚 {percentage}%",
-		"format-warning": "󰀧 {percentage}%",
-		"format-critical": "󰀧 {percentage}%",
-		// "format-icons":
-		// "rotate":
 		"states": {
-			"warning": 75,
-			"critical": 90
+			"warning": 70,
+			"critical": 85
 		},
 		"min-length": 7,
 		"max-length": 7,
-		// "align":
-		// "justify":
-		// "on-click":
-		// "on-click-middle":
-		// "on-click-right":
-		// "on-update":
-		// "on-scroll-up":
-		// "on-scroll-down":
-		// "smooth-scrolling-threshold":
-		// "tooltip":
-		"tooltip-format": "Memory Used: {used:0.0f}/{total:0.0f} GB"
-		// "menu":
-		// "menu-file":
-		// "menu-actions":
-		// "expand":
+		"on-click": "kitty -e btop",
+		"tooltip-format": "<b>Used</b>: {used:0.1f} / {total:0.1f} GB\n<b>Swap</b>: {swapUsed:0.1f} / {swapTotal:0.1f} GB\n<b>Free</b>: {avail:0.1f} GB",
+		"tooltip": true
 	}
 }

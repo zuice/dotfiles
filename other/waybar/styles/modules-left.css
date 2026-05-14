@@ -1,5 +1,5 @@
 #workspaces {
-	margin-left: 4px;
+	margin-left: 2px;
 	padding: 0 4px;
 }
 
@@ -12,16 +12,17 @@
 
 #workspaces button:hover {
 	color: @subtext1;
-	background-color: alpha(@surface0, 0.2);
+	background-color: alpha(@surface0, 0.15);
 }
 
 #workspaces button.active {
-	color: @lavender;
-	background-color: alpha(@lavender, 0.1);
+	color: @accent;
+	background-color: alpha(@accent, 0.10);
 }
 
 #window {
-	padding: 0 14px;
-	color: @subtext0;
+	padding: 0 12px;
+	color: @muted-fg;
 	font-weight: normal;
+	font-size: 12px;
 }

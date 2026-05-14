@@ -1,11 +1,80 @@
+/* ── cpu ── */
+
+#cpu.warning {
+	color: @warning;
+}
+
+#cpu.critical {
+	color: @critical;
+}
+
+/* ── memory ── */
+
+#memory.warning {
+	color: @warning;
+}
+
+#memory.critical {
+	color: @critical;
+}
+
+/* ── temperature ── */
+
+#temperature.warning {
+	color: @warning;
+}
+
+#temperature.critical {
+	color: @critical;
+}
+
+/* ── disk ── */
+
+#disk.warning {
+	color: @warning;
+}
+
+#disk.critical {
+	color: @critical;
+}
+
+/* ── battery ── */
+
 #battery.warning {
-	color: @yellow;
+	color: @warning;
 }
 
 #battery.critical {
-	color: @red;
+	color: @critical;
 }
 
 #battery.charging {
-	color: @green;
+	color: @charging;
+}
+
+#battery.plugged {
+	color: @charging;
+}
+
+/* ── network ── */
+
+#network.disconnected {
+	color: @critical;
+}
+
+#network.disabled {
+	color: @muted-fg;
+}
+
+/* ── pulseaudio ── */
+
+#pulseaudio.muted {
+	color: @muted-fg;
+}
+
+/* ── bluetooth ── */
+
+#bluetooth.off,
+#bluetooth.disabled {
+	color: @muted-fg;
 }

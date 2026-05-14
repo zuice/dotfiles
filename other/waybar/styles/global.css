@@ -1,5 +1,4 @@
 * {
-	color: @main-fg;
 	font-family: "Commit Mono Nerd Font";
 	font-weight: bold;
 	font-size: 13px;
@@ -10,17 +9,18 @@
 }
 
 #waybar > box {
-	background-color: alpha(@base, 0.9);
-	border: 1px solid alpha(@surface1, 0.12);
-	border-radius: 16px;
-	margin: 10px 16px;
-	padding: 0 10px;
+	background-color: alpha(@base, 0.92);
+	border: 1px solid alpha(@surface1, 0.10);
+	border-radius: 14px;
+	margin: 8px 14px;
+	padding: 0 6px;
 }
 
 button {
 	border-radius: 8px;
 	min-width: 16px;
-	padding: 0 8px;
+	padding: 0 6px;
+	transition: all 200ms ease;
 }
 
 button:hover {
@@ -29,11 +29,17 @@ button:hover {
 }
 
 tooltip {
-	border: 1px solid alpha(@surface0, 0.3);
+	border: 1px solid alpha(@surface0, 0.25);
 	border-radius: 10px;
 	background-color: @crust;
+	padding: 4px;
 }
 
 tooltip > box {
 	padding: 4px 8px;
+}
+
+tooltip label {
+	font-weight: normal;
+	font-size: 12px;
 }

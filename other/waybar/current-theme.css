@@ -27,37 +27,17 @@
 @define-color mantle        #181825;
 @define-color crust         #11111b;
 
-/*
-	br - border
-	bg - background
-	fg - foreground
-*/
-
-/* main colors */
+/* semantic aliases */
 
 @define-color accent        @lavender;
-@define-color main-br       @subtext0;
 @define-color main-bg       @crust;
 @define-color main-fg       @text;
-@define-color hover-bg      @base;
-@define-color hover-fg      alpha(@main-fg, 0.75);
-@define-color outline       shade(@main-bg, 0.5);
-
-/* module colors */
-
-@define-color workspaces    @mantle;
-@define-color temperature   @mantle;
-@define-color memory        @base;
-@define-color cpu           @surface0;
-@define-color time          @surface0;
-@define-color date          @base;
-@define-color tray          @mantle;
-@define-color volume        @mantle;
-@define-color backlight     @base;
-@define-color battery       @surface0;
+@define-color dim-fg        @subtext1;
+@define-color muted-fg      @subtext0;
 
 /* state colors */
 
+@define-color ok            @green;
 @define-color warning       @yellow;
 @define-color critical      @red;
 @define-color charging      @green;

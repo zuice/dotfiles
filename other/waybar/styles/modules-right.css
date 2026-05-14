@@ -1,40 +1,88 @@
-#network {
-	padding: 0 14px;
-	color: @subtext1;
-	font-size: 16px;
-	transition: all 200ms ease-in-out;
-}
+/* ── base style for every right-side module ── */
 
-#network:hover {
-	color: @text;
-}
-
-#pulseaudio {
-	padding: 0 14px;
-	color: @subtext1;
+#cpu,
+#memory,
+#temperature,
+#disk,
+#network,
+#bluetooth,
+#pulseaudio,
+#battery,
+#idle_inhibitor,
+#tray {
+	padding: 0 10px;
 	font-size: 14px;
-	border-left: 1px solid alpha(@surface1, 0.2);
-	transition: all 200ms ease-in-out;
+	color: @dim-fg;
+	transition: color 300ms ease, background-color 200ms ease;
 }
 
-#pulseaudio:hover {
+/* ── subtle separators ── */
+
+#memory,
+#temperature,
+#disk,
+#network,
+#bluetooth,
+#pulseaudio,
+#battery,
+#idle_inhibitor,
+#tray {
+	border-left: 1px solid alpha(@surface1, 0.12);
+}
+
+/* ── hover feedback ── */
+
+#cpu:hover,
+#memory:hover,
+#temperature:hover,
+#disk:hover,
+#network:hover,
+#bluetooth:hover,
+#pulseaudio:hover,
+#battery:hover,
+#idle_inhibitor:hover {
 	color: @text;
+	background-color: alpha(@surface0, 0.08);
+	border-radius: 6px;
 }
 
-#battery {
-	padding: 0 14px;
-	color: @subtext1;
-	font-size: 14px;
-	border-left: 1px solid alpha(@surface1, 0.2);
-	transition: all 200ms ease-in-out;
-}
-
-#battery:hover {
-	color: @text;
-}
+/* ── tray ── */
 
 #tray {
-	padding: 0 14px 0 14px;
-	margin-right: 4px;
-	border-left: 1px solid alpha(@surface1, 0.2);
+	padding: 0 8px;
+	margin-right: 2px;
+}
+
+#tray > .passive {
+	opacity: 0.6;
+}
+
+#tray > .needs-attention {
+	background-color: alpha(@red, 0.15);
+}
+
+/* ── idle inhibitor accent when active ── */
+
+#idle_inhibitor.activated {
+	color: @accent;
+}
+
+/* ── bluetooth connected ── */
+
+#bluetooth.connected {
+	color: @blue;
+}
+
+#bluetooth.discoverable {
+	color: @blue;
+}
+
+/* ── network link speed (ethernet) ── */
+
+#network.linked {
+	color: @dim-fg;
+}
+
+#network.ethernet {
+	color: @dim-fg;
 }

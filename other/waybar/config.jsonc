@@ -3,9 +3,15 @@
 		"~/.config/waybar/modules/hyprland/workspaces.jsonc",
 		"~/.config/waybar/modules/hyprland/window.jsonc",
 		"~/.config/waybar/modules/clock.jsonc",
+		"~/.config/waybar/modules/cpu.jsonc",
+		"~/.config/waybar/modules/memory.jsonc",
+		"~/.config/waybar/modules/temperature.jsonc",
+		"~/.config/waybar/modules/disk.jsonc",
+		"~/.config/waybar/modules/network.jsonc",
+		"~/.config/waybar/modules/bluetooth.jsonc",
 		"~/.config/waybar/modules/pulseaudio.jsonc",
 		"~/.config/waybar/modules/battery.jsonc",
-		"~/.config/waybar/modules/network.jsonc",
+		"~/.config/waybar/modules/idle_inhibitor.jsonc",
 		"~/.config/waybar/modules/extras/tray.jsonc"
 	],
 
@@ -17,9 +23,16 @@
 		"clock#time"
 	],
 	"modules-right": [
+		"cpu",
+		"memory",
+		"temperature",
+		"disk",
 		"network",
+		"bluetooth",
 		"pulseaudio#output",
+		"pulseaudio#input",
 		"battery",
+		"idle_inhibitor",
 		"tray"
 	],
 

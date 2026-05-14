@@ -1,27 +1,15 @@
 {
 	"cpu": {
-		"interval": 10,
+		"interval": 5,
 		"format": "󰍛 {usage}%",
-		"format-warning": "󰀨 {usage}%",
-		"format-critical": "󰀨 {usage}%",
-		// "format-icons":
+		"states": {
+			"warning": 60,
+			"critical": 80
+		},
 		"min-length": 7,
 		"max-length": 7,
-		// "align":
-		// "justify":
-		// "rotate":
-		"states": {
-			"warning": 75,
-			"critical": 90
-		},
-		// "on-click":
-		// "on-click-middle":
-		// "on-click-right":
-		// "on-update":
-		// "on-scroll-up":
-		// "on-scroll-down":
-		// "smooth-scrolling-threshold":
-		"tooltip": false
-		// "expand":
+		"on-click": "kitty -e btop",
+		"tooltip-format": "<b>CPU Usage</b>: {usage}%\n<b>Load</b>: {load}",
+		"tooltip": true
 	}
 }
