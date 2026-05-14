@@ -30,11 +30,11 @@ install_packages() {
 
   local pkgs=()
 
-  while IFS= read -r pkg; do
+  for pkg in $1; do
     if ! pacman -Q "$pkg" &>/dev/null; then
       pkgs+=("$pkg")
     fi
-  done <<< "$1"
+  done
 
   if [ ${#pkgs[@]} -gt 0 ]; then
     echo "Installing packages: ${pkgs[*]}"
