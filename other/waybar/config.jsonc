@@ -20,7 +20,7 @@
 		"hyprland/window"
 	],
 	"modules-center": [
-		"clock#time"
+		"custom/time"
 	],
 	"modules-right": [
 		"cpu",

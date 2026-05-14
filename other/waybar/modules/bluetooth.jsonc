@@ -10,8 +10,8 @@
 		"max-length": 15,
 		"on-click": "kitty -e ~/.config/waybar/scripts/bluetooth.sh",
 		"on-click-right": "bluetoothctl power off && notify-send 'Bluetooth Off' -i 'network-bluetooth-inactive' -h string:x-canonical-private-synchronous:bluetooth",
-		"tooltip-format": "<b>Status</b>: {status}",
-		"tooltip-format-connected": "<b>Device</b>: {device_alias}\n<b>Address</b>: {device_address}",
-		"tooltip-format-connected-battery": "<b>Device</b>: {device_alias}\n<b>Battery</b>: {device_battery_percentage}%\n<b>Address</b>: {device_address}"
+		"tooltip-format": "Status: {status}",
+		"tooltip-format-connected": "Device: {device_alias}\nAddress: {device_address}",
+		"tooltip-format-connected-battery": "Device: {device_alias}\nBattery: {device_battery_percentage}%\nAddress: {device_address}"
 	}
 }

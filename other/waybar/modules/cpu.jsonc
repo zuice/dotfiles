@@ -9,7 +9,7 @@
 		"min-length": 7,
 		"max-length": 7,
 		"on-click": "kitty -e btop",
-		"tooltip-format": "<b>CPU Usage</b>: {usage}%\n<b>Load</b>: {load}",
+		"tooltip-format": "CPU Usage: {usage}%",
 		"tooltip": true
 	}
 }

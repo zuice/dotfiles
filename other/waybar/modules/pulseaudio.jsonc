@@ -4,10 +4,7 @@
 		"modules": [
 			"pulseaudio#output",
 			"pulseaudio#input"
-		],
-		"drawer": {
-			"transition-left-to-right": false
-		}
+		]
 	},
 
 	"pulseaudio#output": {
@@ -23,10 +20,11 @@
 		},
 		"min-length": 7,
 		"max-length": 7,
-		"on-click": "~/.config/waybar/scripts/volume.sh output mute",
+		"on-click": "pavucontrol",
+		"on-click-right": "~/.config/waybar/scripts/volume.sh output mute",
 		"on-scroll-up": "~/.config/waybar/scripts/volume.sh output raise",
 		"on-scroll-down": "~/.config/waybar/scripts/volume.sh output lower",
-		"tooltip-format": "<b>Output</b>: {desc}"
+		"tooltip-format": "Output: {desc}"
 	},
 
 	"pulseaudio#input": {
@@ -38,6 +36,6 @@
 		"on-click": "~/.config/waybar/scripts/volume.sh input mute",
 		"on-scroll-up": "~/.config/waybar/scripts/volume.sh input raise",
 		"on-scroll-down": "~/.config/waybar/scripts/volume.sh input lower",
-		"tooltip-format": "<b>Input</b>: {desc}"
+		"tooltip-format": "Input: {desc}"
 	}
 }

@@ -1,6 +1,6 @@
 {
 	"temperature": {
-		"thermal-zone": 1,
+		"hwmon-path": "/sys/class/hwmon/hwmon1/temp1_input",
 		"critical-threshold": 85,
 		"interval": 5,
 		"format": "{icon} {temperatureC}°",
@@ -15,7 +15,7 @@
 		},
 		"min-length": 7,
 		"max-length": 7,
-		"tooltip-format": "<b>CPU Temp</b>: {temperatureC}°C / {temperatureF}°F",
+		"tooltip-format": "CPU Temp: {temperatureC}°C / {temperatureF}°F",
 		"tooltip": true
 	}
 }

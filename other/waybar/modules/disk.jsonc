@@ -9,7 +9,7 @@
 		},
 		"min-length": 8,
 		"max-length": 8,
-		"tooltip-format": "<b>Used</b>: {used} / {total}\n<b>Free</b>: {free}",
+		"tooltip-format": "Used: {used} / {total}\nFree: {free}",
 		"tooltip": true
 	}
 }

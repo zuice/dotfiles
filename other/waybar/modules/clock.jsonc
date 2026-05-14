@@ -1,18 +1,12 @@
 {
-	"clock#time": {
-		"format": "󰥔 {:%I:%M %p}",
-		"min-length": 12,
-		"max-length": 12,
-		"tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-		"calendar": {
-			"mode": "month",
-			"mode-mon-col": 6,
-			"format": {
-				"months": "<span alpha='100%'><b>{}</b></span>",
-				"days": "<span alpha='90%'>{}</span>",
-				"weekdays": "<span alpha='80%'><i>{}</i></span>",
-				"today": "<span alpha='100%'><b><u>{}</u></b></span>"
-			}
+	"custom/time": {
+		"exec": "~/.config/waybar/scripts/clock.sh",
+		"format": "󰥔 {}",
+		"interval": 1,
+		"return-type": "json",
+		"tooltip": false
+	}
+}
 		},
 		"actions": {
 			"on-click": "mode"

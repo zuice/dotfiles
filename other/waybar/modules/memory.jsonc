@@ -9,7 +9,7 @@
 		"min-length": 7,
 		"max-length": 7,
 		"on-click": "kitty -e btop",
-		"tooltip-format": "<b>Used</b>: {used:0.1f} / {total:0.1f} GB\n<b>Swap</b>: {swapUsed:0.1f} / {swapTotal:0.1f} GB\n<b>Free</b>: {avail:0.1f} GB",
+		"tooltip-format": "Used: {used:0.1f} / {total:0.1f} GB\nSwap: {swapUsed:0.1f} / {swapTotal:0.1f} GB\nFree: {avail:0.1f} GB",
 		"tooltip": true
 	}
 }
