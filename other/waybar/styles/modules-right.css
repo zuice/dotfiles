@@ -9,6 +9,7 @@
 #pulseaudio,
 #battery,
 #idle_inhibitor,
+#custom-swaync,
 #tray {
 	padding: 0 10px;
 	font-size: 14px;
@@ -26,6 +27,7 @@
 #pulseaudio,
 #battery,
 #idle_inhibitor,
+#custom-swaync,
 #tray {
 	border-left: 1px solid alpha(@surface1, 0.12);
 }
@@ -40,10 +42,17 @@
 #bluetooth:hover,
 #pulseaudio:hover,
 #battery:hover,
-#idle_inhibitor:hover {
+#idle_inhibitor:hover,
+#custom-swaync:hover {
 	color: @text;
 	background-color: alpha(@surface0, 0.08);
 	border-radius: 6px;
+}
+
+/* ── swaync notification indicator ── */
+
+#custom-swaync.notification {
+	color: @peach;
 }
 
 /* ── tray ── */

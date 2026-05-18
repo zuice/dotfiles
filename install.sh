@@ -101,6 +101,7 @@ if [ "$HAS_HYPRLAND" = true ]; then
   backup_and_link ~/.config/hypr/scripts "$DOTFILES/other/hypr/scripts"
   backup_and_link ~/.config/waybar "$DOTFILES/other/waybar"
   backup_and_link ~/.config/rofi "$DOTFILES/other/rofi"
+  backup_and_link ~/.config/swaync "$DOTFILES/other/swaync"
   backup_and_link ~/.icons/default "$DOTFILES/other/icons/default"
 fi
 

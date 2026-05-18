@@ -1,7 +1,12 @@
 #!/bin/bash
 
-if grep -q closed /proc/acpi/button/lid/LID0/state 2>/dev/null; then
-    hyprctl keyword monitor "eDP-1, disable"
-else
-    hyprctl keyword monitor "eDP-1, preferred, auto, 1"
-fi
+for path in /proc/acpi/button/lid/*/state; do
+    if [ -f "$path" ]; then
+        if grep -q closed "$path"; then
+            hyprctl keyword monitor "eDP-1, disable"
+        else
+            hyprctl keyword monitor "eDP-1, preferred, auto, 1"
+        fi
+        exit 0
+    fi
+done

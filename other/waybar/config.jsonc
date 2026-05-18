@@ -12,6 +12,7 @@
 		"~/.config/waybar/modules/pulseaudio.jsonc",
 		"~/.config/waybar/modules/battery.jsonc",
 		"~/.config/waybar/modules/idle_inhibitor.jsonc",
+		"~/.config/waybar/modules/custom/swaync.jsonc",
 		"~/.config/waybar/modules/extras/tray.jsonc"
 	],
 
@@ -33,6 +34,7 @@
 		"pulseaudio#input",
 		"battery",
 		"idle_inhibitor",
+		"custom/swaync",
 		"tray"
 	],
 
