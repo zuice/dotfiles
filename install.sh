@@ -30,7 +30,7 @@ install_packages() {
 
   local pkgs=()
 
-  for pkg in $1; do
+  for pkg in "$@"; do
     if ! pacman -Q "$pkg" &>/dev/null; then
       pkgs+=("$pkg")
     fi
@@ -38,16 +38,16 @@ install_packages() {
 
   if [ ${#pkgs[@]} -gt 0 ]; then
     echo "Installing packages: ${pkgs[*]}"
-    sudo pacman -S --noconfirm --needed "${pkgs[@]}"
+    sudo pacman -Sy --noconfirm --needed "${pkgs[@]}"
   fi
 }
 
 # ── Shared packages ──
-SHARED_PKGS="starship neovim git"
+SHARED_PKGS=(starship neovim git)
 
 echo ""
 echo "Checking shared packages..."
-install_packages "$SHARED_PKGS"
+install_packages "${SHARED_PKGS[@]}"
 
 # ── Link shared configs ──
 echo ""
@@ -73,7 +73,7 @@ else
 fi
 
 # ── Hyprland ──
-HYPRLAND_PKGS="hyprland hyprlock hypridle waybar rofi swaybg swaync wl-clipboard cliphist polkit-kde-agent blueman udiskie brightnessctl playerctl wireplumber grim slurp ttf-firacode-nerd"
+HYPRLAND_PKGS=(hyprland hyprlock hypridle waybar rofi swaybg swaync wl-clipboard cliphist polkit-kde-agent blueman udiskie brightnessctl playerctl wireplumber grim slurp ttf-firacode-nerd)
 
 echo ""
 if command -v Hyprland &>/dev/null; then
@@ -90,7 +90,7 @@ fi
 
 if [ "$HAS_HYPRLAND" = true ]; then
   echo "Checking Hyprland packages..."
-  install_packages "$HYPRLAND_PKGS"
+  install_packages "${HYPRLAND_PKGS[@]}"
 
   echo ""
   echo "Installing Hyprland configs..."
