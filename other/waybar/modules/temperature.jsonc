@@ -3,7 +3,7 @@
 		"hwmon-path": "/sys/class/hwmon/hwmon1/temp1_input",
 		"critical-threshold": 85,
 		"interval": 5,
-		"format": "{icon} {temperatureC}°",
+		"format": "<span color='#ff9e64'>{icon}</span> {temperatureC}°",
 		"format-icons": [
 			"󱃃",
 			"󰔏",

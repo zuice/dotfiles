@@ -1,14 +1,14 @@
 {
 	"cpu": {
 		"interval": 5,
-		"format": "󰍛 {usage}%",
+		"format": "<span color='#7aa2f7'>󰍛</span> {usage}%",
 		"states": {
 			"warning": 60,
 			"critical": 80
 		},
-		"min-length": 7,
-		"max-length": 7,
-		"on-click": "kitty -e btop",
+		"min-length": 6,
+		"max-length": 6,
+		"on-click": "ghostty -e btop",
 		"tooltip-format": "CPU Usage: {usage}%",
 		"tooltip": true
 	}

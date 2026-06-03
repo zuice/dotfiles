@@ -4,14 +4,14 @@
 			"warning": 20,
 			"critical": 10
 		},
-		"format": "{icon} {capacity}%",
+		"format": "<span color='#9ece6a'>{icon}</span> {capacity}%",
 		"format-time": "{H}h {M}min",
 		"format-icons": [
 			"󰂎", "󰁻", "󰁼", "󰁽", "󰁾",
 			"󰁿", "󰂀", "󰂁", "󰂂", "󰁹"
 		],
-		"format-charging": "󰉁 {capacity}%",
-		"format-plugged": "󰚥 {capacity}%",
+		"format-charging": "<span color='#9ece6a'>󰉁</span> {capacity}%",
+		"format-plugged": "<span color='#9ece6a'>󰚥</span> {capacity}%",
 		"min-length": 7,
 		"max-length": 7,
 		"tooltip-format": "<b>Discharging</b>: {time}",

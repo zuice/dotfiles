@@ -11,7 +11,9 @@
 		"~/.config/waybar/modules/bluetooth.jsonc",
 		"~/.config/waybar/modules/pulseaudio.jsonc",
 		"~/.config/waybar/modules/battery.jsonc",
+		"~/.config/waybar/modules/backlight.jsonc",
 		"~/.config/waybar/modules/idle_inhibitor.jsonc",
+		"~/.config/waybar/modules/mpris.jsonc",
 		"~/.config/waybar/modules/custom/swaync.jsonc",
 		"~/.config/waybar/modules/extras/tray.jsonc"
 	],
@@ -21,6 +23,7 @@
 		"hyprland/window"
 	],
 	"modules-center": [
+		"mpris",
 		"custom/time"
 	],
 	"modules-right": [
@@ -32,6 +35,7 @@
 		"bluetooth",
 		"pulseaudio#output",
 		"pulseaudio#input",
+		"backlight",
 		"battery",
 		"idle_inhibitor",
 		"custom/swaync",

@@ -1,27 +1,35 @@
 #workspaces {
 	margin-left: 2px;
-	padding: 0 4px;
+	padding: 0 2px;
+	background-color: alpha(@surface0, 0.25);
+	border-radius: 8px;
 }
 
 #workspaces button {
-	padding: 0 6px;
-	border-radius: 8px;
+	padding: 0 5px;
+	border-radius: 6px;
 	color: @overlay0;
-	transition: all 200ms ease-in-out;
+	transition: all 150ms ease-in-out;
 }
 
 #workspaces button:hover {
 	color: @subtext1;
-	background-color: alpha(@surface0, 0.15);
+	background-color: alpha(@surface1, 0.2);
 }
 
 #workspaces button.active {
 	color: @accent;
-	background-color: alpha(@accent, 0.10);
+	background-color: alpha(@accent, 0.12);
+	font-weight: bold;
+}
+
+#workspaces button.urgent {
+	color: @red;
+	background-color: alpha(@red, 0.12);
 }
 
 #window {
-	padding: 0 12px;
+	padding: 0 10px;
 	color: @muted-fg;
 	font-weight: normal;
 	font-size: 12px;

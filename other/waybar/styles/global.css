@@ -9,29 +9,30 @@
 }
 
 #waybar > box {
-	background-color: alpha(@base, 0.92);
-	border: 1px solid alpha(@surface1, 0.10);
-	border-radius: 14px;
-	margin: 8px 14px;
-	padding: 0 6px;
+	background-color: alpha(@base, 0.95);
+	border: 1px solid alpha(@surface1, 0.15);
+	border-radius: 12px;
+	margin: 6px 12px;
+	padding: 0 4px;
+	box-shadow: 0 2px 8px 0 alpha(@crust, 0.6);
 }
 
 button {
 	border-radius: 8px;
 	min-width: 16px;
 	padding: 0 6px;
-	transition: all 200ms ease;
+	transition: all 150ms ease;
 }
 
 button:hover {
-	background-color: alpha(@surface0, 0.25);
+	background-color: alpha(@surface0, 0.3);
 	color: @text;
 }
 
 tooltip {
-	border: 1px solid alpha(@surface0, 0.25);
+	border: 1px solid alpha(@surface1, 0.25);
 	border-radius: 10px;
-	background-color: @crust;
+	background-color: @base;
 	padding: 4px;
 }
 
@@ -42,4 +43,5 @@ tooltip > box {
 tooltip label {
 	font-weight: normal;
 	font-size: 12px;
+	color: @subtext1;
 }

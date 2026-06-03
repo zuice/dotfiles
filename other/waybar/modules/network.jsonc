@@ -1,10 +1,10 @@
 {
 	"network": {
 		"interval": 5,
-		"format-wifi": "{icon}",
-		"format-ethernet": "󰈀",
-		"format-disconnected": "󰤯",
-		"format-disabled": "󰤮",
+		"format-wifi": "<span color='#7dcfff'>{icon}</span>",
+		"format-ethernet": "<span color='#7dcfff'>󰈀</span>",
+		"format-disconnected": "<span color='#f7768e'>󰤯</span>",
+		"format-disabled": "<span color='#414868'>󰤮</span>",
 		"format-icons": [
 			"󰤟",
 			"󰤢",
@@ -13,7 +13,7 @@
 		],
 		"min-length": 2,
 		"max-length": 2,
-		"on-click": "kitty -e ~/.config/waybar/scripts/network.sh",
+		"on-click": "ghostty -e ~/.config/waybar/scripts/network.sh",
 		"on-click-right": "nmcli radio wifi off && notify-send 'Wi-Fi Disabled' -i 'network-wireless-off' -h string:x-canonical-private-synchronous:network",
 		"tooltip-format-wifi": "Network: {essid}\nIP: {ipaddr}/{cidr}\nSignal: {signalStrength}%\nFreq: {frequency} GHz\nGateway: {gwaddr}",
 		"tooltip-format-ethernet": "Interface: {ifname}\nIP: {ipaddr}/{cidr}\nGateway: {gwaddr}",

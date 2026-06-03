@@ -1,11 +1,8 @@
 {
 	"hyprland/window": {
-		"format": "{}",
+		"format": " {}",
 		"rewrite": {
-			"": "Desktop",
-			"kitty": "Terminal",
-			"zsh": "Terminal",
-			"~": "Terminal"
+			"": ""
 		},
 		"max-length": 40,
 		"swap-icon-label": false

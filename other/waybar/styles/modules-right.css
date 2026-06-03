@@ -1,35 +1,62 @@
-/* ── base style for every right-side module ── */
+/* ── system group chip (cpu, mem, temp, disk) ── */
 
 #cpu,
 #memory,
 #temperature,
-#disk,
-#network,
-#bluetooth,
-#pulseaudio,
-#battery,
-#idle_inhibitor,
-#custom-swaync,
-#tray {
-	padding: 0 10px;
-	font-size: 14px;
+#disk {
+	padding: 0 8px;
+	font-size: 13px;
 	color: @dim-fg;
-	transition: color 300ms ease, background-color 200ms ease;
+	transition: color 200ms ease, background-color 150ms ease;
 }
 
-/* ── subtle separators ── */
+/* ── connectivity (network, bluetooth) ── */
 
-#memory,
-#temperature,
-#disk,
 #network,
-#bluetooth,
-#pulseaudio,
-#battery,
+#bluetooth {
+	padding: 0 8px;
+	font-size: 13px;
+	color: @dim-fg;
+	transition: color 200ms ease, background-color 150ms ease;
+}
+
+/* ── audio ── */
+
+#pulseaudio {
+	padding: 0 8px;
+	font-size: 13px;
+	color: @dim-fg;
+	transition: color 200ms ease, background-color 150ms ease;
+}
+
+/* ── brightness & battery ── */
+
+#backlight,
+#battery {
+	padding: 0 8px;
+	font-size: 13px;
+	color: @dim-fg;
+	transition: color 200ms ease, background-color 150ms ease;
+}
+
+/* ── controls (caffeine, notifications, tray) ── */
+
 #idle_inhibitor,
 #custom-swaync,
 #tray {
-	border-left: 1px solid alpha(@surface1, 0.12);
+	padding: 0 8px;
+	font-size: 13px;
+	color: @dim-fg;
+	transition: color 200ms ease, background-color 150ms ease;
+}
+
+/* ── group separators ── */
+
+#network,
+#pulseaudio,
+#backlight,
+#idle_inhibitor {
+	border-left: 1px solid alpha(@surface1, 0.25);
 }
 
 /* ── hover feedback ── */
@@ -41,11 +68,12 @@
 #network:hover,
 #bluetooth:hover,
 #pulseaudio:hover,
+#backlight:hover,
 #battery:hover,
 #idle_inhibitor:hover,
 #custom-swaync:hover {
 	color: @text;
-	background-color: alpha(@surface0, 0.08);
+	background-color: alpha(@surface0, 0.12);
 	border-radius: 6px;
 }
 
@@ -63,17 +91,18 @@
 }
 
 #tray > .passive {
-	opacity: 0.6;
+	opacity: 0.5;
 }
 
 #tray > .needs-attention {
 	background-color: alpha(@red, 0.15);
+	border-radius: 4px;
 }
 
 /* ── idle inhibitor accent when active ── */
 
 #idle_inhibitor.activated {
-	color: @accent;
+	color: @yellow;
 }
 
 /* ── bluetooth connected ── */
@@ -86,7 +115,7 @@
 	color: @blue;
 }
 
-/* ── network link speed (ethernet) ── */
+/* ── network states ── */
 
 #network.linked {
 	color: @dim-fg;

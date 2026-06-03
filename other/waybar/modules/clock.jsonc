@@ -1,15 +1,9 @@
 {
 	"custom/time": {
 		"exec": "~/.config/waybar/scripts/clock.sh",
-		"format": "󰥔 {}",
+		"format": " {}",
 		"interval": 1,
 		"return-type": "json",
 		"tooltip": false
-	}
-}
-		},
-		"actions": {
-			"on-click": "mode"
-		}
 	}
 }

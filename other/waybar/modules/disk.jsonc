@@ -2,13 +2,13 @@
 	"disk": {
 		"interval": 30,
 		"path": "/",
-		"format": "󰋊 {percentage_used}%",
+		"format": "<span color='#9ece6a'>󰋊</span> {percentage_used}%",
 		"states": {
 			"warning": 75,
 			"critical": 90
 		},
-		"min-length": 8,
-		"max-length": 8,
+		"min-length": 7,
+		"max-length": 7,
 		"tooltip-format": "Used: {used} / {total}\nFree: {free}",
 		"tooltip": true
 	}

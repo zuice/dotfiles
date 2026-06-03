@@ -9,6 +9,10 @@ tooltip label {
 	font-weight: normal;
 }
 
+#workspaces button label {
+	font-size: 11px;
+}
+
 #workspaces button.active label {
-	font-size: 15px;
+	font-size: 13px;
 }

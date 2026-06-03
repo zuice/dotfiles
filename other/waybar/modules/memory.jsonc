@@ -1,14 +1,14 @@
 {
 	"memory": {
 		"interval": 5,
-		"format": "󰘚 {percentage}%",
+		"format": "<span color='#bb9af7'>󰘚</span> {percentage}%",
 		"states": {
 			"warning": 70,
 			"critical": 85
 		},
-		"min-length": 7,
-		"max-length": 7,
-		"on-click": "kitty -e btop",
+		"min-length": 6,
+		"max-length": 6,
+		"on-click": "ghostty -e btop",
 		"tooltip-format": "Used: {used:0.1f} / {total:0.1f} GB\nSwap: {swapUsed:0.1f} / {swapTotal:0.1f} GB\nFree: {avail:0.1f} GB",
 		"tooltip": true
 	}

@@ -1,9 +1,9 @@
 format = """
-[](bold #fab387)\
+[](bold #7aa2f7)\
 $os\
-[](bold #f9e2af)\
+[](bold #e0af68)\
 $directory\
-[](bold #45475a)\
+[](bold #3b4261)\
 $git_branch\
 $git_status\
 $git_state\
@@ -23,7 +23,7 @@ right_format = """$time"""
 
 [os]
 disabled = false
-style = "bold #fab387"
+style = "bold #7aa2f7"
 format = "[ $symbol ]($style)"
 
 [os.symbols]
@@ -32,25 +32,25 @@ Linux = ""
 Macos = "󰀵"
 
 [character]
-success_symbol = "[  ❯](bold #fab387)"
-error_symbol = "[  ❯](bold #f38ba8)"
-vimcmd_symbol = "[  ❮](bold #a6e3a1)"
+success_symbol = "[  ❯](bold #7aa2f7)"
+error_symbol = "[  ❯](bold #f7768e)"
+vimcmd_symbol = "[  ❮](bold #9ece6a)"
 
 [directory]
-style = "bold #f9e2af"
+style = "bold #e0af68"
 truncation_length = 1
 fish_style_pwd_dir_length = 1
 format = "[ $path ]($style)[$read_only]($read_only_style)"
 read_only = " 󰌾"
-read_only_style = "bold #f38ba8"
+read_only_style = "bold #f7768e"
 
 [git_branch]
-style = "bold #cba6f7"
+style = "bold #bb9af7"
 symbol = "󰊢"
 format = "[ $symbol $branch]($style)"
 
 [git_status]
-style = "bold #94e2d5"
+style = "bold #7dcfff"
 format = '([$all_status$ahead_behind]($style))'
 conflicted = " =${count}"
 ahead = " ⇡${count}"
@@ -64,63 +64,63 @@ renamed = " »"
 deleted = " ✘"
 
 [git_state]
-style = "bold #f9e2af"
+style = "bold #e0af68"
 format = ' \([$state( $progress_current/$progress_total)]($style)\)'
 
 [fill]
 symbol = " "
 
 [nodejs]
-style = "bold #89b4fa"
+style = "bold #7aa2f7"
 symbol = "󰎙"
 version_format = "${major}.${minor}"
 format = "[ $symbol $version]($style)"
 
 [python]
-style = "bold #a6e3a1"
+style = "bold #9ece6a"
 symbol = "󰌠"
 version_format = "${major}.${minor}"
 format = '[ $symbol ${version}(\($virtualenv\))]($style)'
 
 [rust]
-style = "bold #fab387"
+style = "bold #ff9e64"
 symbol = "󱘗"
 version_format = "${major}.${minor}"
 format = "[ $symbol $version]($style)"
 
 [golang]
-style = "bold #89dceb"
+style = "bold #7dcfff"
 symbol = "󰟓"
 version_format = "${major}.${minor}"
 format = "[ $symbol $version]($style)"
 
 [java]
-style = "bold #f38ba8"
+style = "bold #f7768e"
 symbol = "󰬷"
 version_format = "${major}"
 format = "[ $symbol $version]($style)"
 
 [lua]
-style = "bold #74c7ec"
+style = "bold #73daca"
 symbol = "󰢱"
 version_format = "${major}.${minor}"
 format = "[ $symbol $version]($style)"
 
 [bun]
-style = "bold #f5c2e7"
+style = "bold #bb9af7"
 symbol = "󰚩"
 version_format = "${major}.${minor}"
 format = "[ $symbol $version]($style)"
 
 [cmd_duration]
-style = "bold #7f849c"
+style = "bold #565f89"
 format = "[ $duration]($style)"
 min_time = 3_000
 show_milliseconds = false
 
 [time]
 disabled = false
-style = "bold #585b70"
+style = "bold #3b4261"
 format = "[ $time]($style)"
 time_format = "%I:%M %p"
 
