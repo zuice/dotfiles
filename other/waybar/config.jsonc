@@ -32,7 +32,6 @@
 		"temperature",
 		"disk",
 		"pulseaudio#output",
-		"pulseaudio#input",
 		"backlight",
 		"battery",
 		"network",

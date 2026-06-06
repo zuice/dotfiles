@@ -1,0 +1,67 @@
+* {
+	font-size: 11px;
+}
+
+#waybar > box {
+	border-radius: 10px;
+	margin: 4px 8px;
+	padding: 0 4px;
+}
+
+button {
+	border-radius: 6px;
+	min-width: 12px;
+	padding: 0 4px;
+}
+
+tooltip label {
+	font-size: 10px;
+}
+
+#workspaces button.active label {
+	font-size: 12px;
+}
+
+#workspaces {
+	margin-left: 1px;
+	padding: 0 2px;
+}
+
+#workspaces button {
+	padding: 0 4px;
+	border-radius: 6px;
+}
+
+#window {
+	padding: 0 8px;
+	font-size: 10px;
+}
+
+#clock.time {
+	padding: 0 16px;
+	font-size: 11px;
+}
+
+#cpu,
+#memory,
+#temperature,
+#disk,
+#pulseaudio,
+#backlight,
+#battery {
+	padding: 0 6px;
+	font-size: 11px;
+}
+
+#network,
+#bluetooth,
+#idle_inhibitor,
+#custom-swaync,
+#tray {
+	padding: 0 8px;
+	font-size: 11px;
+}
+
+#backlight {
+	font-size: 11px;
+}

@@ -12,8 +12,8 @@
 		],
 		"format-charging": "<span color='#9ece6a'>󰉁</span> {capacity}%",
 		"format-plugged": "<span color='#9ece6a'>󰚥</span> {capacity}%",
-		"min-length": 7,
-		"max-length": 7,
+		"min-length": 6,
+		"max-length": 6,
 		"tooltip-format": "<b>Discharging</b>: {time}",
 		"tooltip-format-charging": "<b>Charging</b>: {time}",
 		"events": {

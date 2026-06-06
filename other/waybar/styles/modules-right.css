@@ -52,10 +52,16 @@
 
 /* ── group separators ── */
 
-#network,
+#memory,
+#temperature,
+#disk,
 #pulseaudio,
 #backlight,
-#idle_inhibitor {
+#battery,
+#network,
+#bluetooth,
+#idle_inhibitor,
+#custom-swaync {
 	border-left: 1px solid alpha(@surface1, 0.25);
 }
 
