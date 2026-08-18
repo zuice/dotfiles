@@ -1,18 +1,13 @@
-* {
-	font-family: "Commit Mono Nerd Font";
-	font-weight: bold;
-	font-size: 13px;
-}
-
 #waybar {
 	background-color: transparent;
+	color: @main-fg;
 }
 
 #waybar > box {
 	background-color: alpha(@base, 0.95);
-	border: 1px solid alpha(@surface1, 0.15);
-	border-radius: 12px;
-	margin: 6px 12px;
+	border: 1px solid alpha(@surface2, 0.22);
+	border-radius: 10px;
+	margin: 6px 10px;
 	padding: 0 4px;
 	box-shadow: 0 2px 8px 0 alpha(@crust, 0.6);
 }

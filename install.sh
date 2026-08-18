@@ -73,7 +73,7 @@ else
 fi
 
 # ── Hyprland ──
-HYPRLAND_PKGS=(hyprland hyprlock hypridle waybar rofi swaybg swaync wl-clipboard cliphist polkit-kde-agent blueman udiskie brightnessctl playerctl wireplumber grim slurp ttf-firacode-nerd)
+HYPRLAND_PKGS=(hyprland hyprlock hypridle waybar rofi swaybg swaync wl-clipboard cliphist polkit-kde-agent blueman udiskie brightnessctl playerctl wireplumber grim slurp btop ttf-firacode-nerd)
 
 echo ""
 if command -v Hyprland &>/dev/null; then

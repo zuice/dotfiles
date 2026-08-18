@@ -1,67 +1,64 @@
-* {
+window#waybar.eDP-1 * {
 	font-size: 11px;
 }
 
-#waybar > box {
-	border-radius: 10px;
+window#waybar.eDP-1 > box {
+	border-radius: 9px;
 	margin: 4px 8px;
 	padding: 0 4px;
 }
 
-button {
+window#waybar.eDP-1 button {
 	border-radius: 6px;
 	min-width: 12px;
 	padding: 0 4px;
 }
 
-tooltip label {
-	font-size: 10px;
-}
-
-#workspaces button.active label {
+window#waybar.eDP-1 #workspaces button.active label {
 	font-size: 12px;
 }
 
-#workspaces {
+window#waybar.eDP-1 #workspaces {
 	margin-left: 1px;
 	padding: 0 2px;
 }
 
-#workspaces button {
+window#waybar.eDP-1 #workspaces button {
 	padding: 0 4px;
 	border-radius: 6px;
 }
 
-#window {
+window#waybar.eDP-1 #window {
 	padding: 0 8px;
 	font-size: 10px;
 }
 
-#clock.time {
+window#waybar.eDP-1 #clock {
 	padding: 0 16px;
 	font-size: 11px;
 }
 
-#cpu,
-#memory,
-#temperature,
-#disk,
-#pulseaudio,
-#backlight,
-#battery {
+window#waybar.eDP-1 #mpris,
+window#waybar.eDP-1 #cpu,
+window#waybar.eDP-1 #memory,
+window#waybar.eDP-1 #temperature,
+window#waybar.eDP-1 #disk,
+window#waybar.eDP-1 #pulseaudio,
+window#waybar.eDP-1 #backlight,
+window#waybar.eDP-1 #battery {
 	padding: 0 6px;
 	font-size: 11px;
 }
 
-#network,
-#bluetooth,
-#idle_inhibitor,
-#custom-swaync,
-#tray {
+window#waybar.eDP-1 #network,
+window#waybar.eDP-1 #bluetooth,
+window#waybar.eDP-1 #idle_inhibitor,
+window#waybar.eDP-1 #custom-swaync,
+window#waybar.eDP-1 #tray {
 	padding: 0 8px;
 	font-size: 11px;
 }
 
-#backlight {
+window#waybar.eDP-1 #backlight {
 	font-size: 11px;
 }

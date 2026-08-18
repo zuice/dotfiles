@@ -1,8 +1,6 @@
 #workspaces {
 	margin-left: 2px;
 	padding: 0 2px;
-	background-color: alpha(@surface0, 0.25);
-	border-radius: 8px;
 }
 
 #workspaces button {
@@ -30,7 +28,7 @@
 
 #window {
 	padding: 0 10px;
-	color: @muted-fg;
+	color: @dim-fg;
 	font-weight: normal;
 	font-size: 12px;
 }

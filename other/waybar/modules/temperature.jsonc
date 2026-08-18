@@ -1,21 +1,30 @@
 {
 	"temperature": {
-		"hwmon-path": "/sys/class/hwmon/hwmon1/temp1_input",
-		"critical-threshold": 85,
-		"interval": 5,
-		"format": "<span color='#ff9e64'>{icon}</span> {temperatureC}°",
-		"format-icons": [
-			"󱃃",
-			"󰔏",
-			"󱃂"
+		"hwmon-path-abs": [
+			"/sys/devices/pci0000:00/0000:00:18.3/hwmon",
+			"/sys/devices/platform/coretemp.0/hwmon"
 		],
-		"states": {
-			"warning": 65,
-			"critical": 80
-		},
+		"input-filename": "temp1_input",
+		"warning-threshold": 75,
+		"critical-threshold": 90,
+		"interval": 3,
+		"format": "{icon} {temperatureC}°",
+		"format-icons": [
+			"<span color='#7dcfff'>󱃃</span>",
+			"<span color='#7dcfff'>󱃃</span>",
+			"<span color='#7dcfff'>󱃃</span>",
+			"<span color='#7dcfff'>󱃃</span>",
+			"<span color='#73daca'>󰔏</span>",
+			"<span color='#9ece6a'>󰔏</span>",
+			"<span color='#9ece6a'>󰔏</span>",
+			"<span color='#e0af68'>󰔏</span>",
+			"<span color='#ff9e64'>󱃂</span>",
+			"<span color='#f7768e'>󱃂</span>"
+		],
 		"min-length": 7,
 		"max-length": 7,
-		"tooltip-format": "CPU Temp: {temperatureC}°C / {temperatureF}°F",
+		"on-click": "ghostty -e sh -c 'command -v btop >/dev/null && exec btop; exec top'",
+		"tooltip-format": "CPU package: {temperatureC}°C / {temperatureF}°F",
 		"tooltip": true
 	}
 }

@@ -23,14 +23,11 @@
 		"hyprland/window"
 	],
 	"modules-center": [
-		"mpris",
-		"custom/time"
+		"clock"
 	],
 	"modules-right": [
-		"cpu",
-		"memory",
-		"temperature",
-		"disk",
+		"mpris",
+		"group/hardware",
 		"pulseaudio#output",
 		"backlight",
 		"battery",
@@ -41,7 +38,18 @@
 		"tray"
 	],
 
+	"group/hardware": {
+		"orientation": "inherit",
+		"modules": [
+			"temperature",
+			"cpu",
+			"memory",
+			"disk"
+		]
+	},
+
 	"layer": "top",
+	"position": "top",
 	"height": 0,
 	"width": 0,
 	"margin": 0,

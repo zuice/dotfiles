@@ -8,7 +8,7 @@
 		},
 		"min-length": 6,
 		"max-length": 6,
-		"on-click": "ghostty -e btop",
+		"on-click": "ghostty -e sh -c 'command -v btop >/dev/null && exec btop; exec top'",
 		"tooltip-format": "CPU Usage: {usage}%",
 		"tooltip": true
 	}

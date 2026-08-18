@@ -29,7 +29,7 @@
 
 /* semantic aliases */
 
-@define-color accent        @blue;
+@define-color accent        @sky;
 @define-color main-bg       @crust;
 @define-color main-fg       @text;
 @define-color dim-fg        @subtext1;

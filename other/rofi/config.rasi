@@ -1,6 +1,6 @@
 configuration {
     modi: "drun";
-    font: "Commit Mono Nerd Font 13";
+    font: "FiraCode Nerd Font Mono 13";
     show-icons: true;
     icon-theme: "Papirus-Dark";
     drun-display-format: "{name}";
@@ -10,15 +10,15 @@ configuration {
 @theme "/dev/null"
 
 * {
-    bg: #11111b;
-    bg-alt: #181825;
-    fg: #cdd6f4;
-    fg-alt: #a6adc8;
-    fg-dim: #6c7086;
-    accent: #b4befe;
-    border: #313244;
-    selected: #313244;
-    urgent: #f38ba8;
+    bg: #1a1b26f2;
+    bg-alt: #24283b;
+    fg: #c0caf5;
+    fg-alt: #a9b1d6;
+    fg-dim: #565f89;
+    accent: #7dcfff;
+    border: #3b4261;
+    selected: #292e42;
+    urgent: #f7768e;
 
     background-color: transparent;
     text-color: @fg;

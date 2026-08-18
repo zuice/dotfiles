@@ -10,6 +10,9 @@
 		"status-icons": {
 			"paused": "󰏤"
 		},
-		"max-length": 40
+		"max-length": 24,
+		"on-click": "playerctl play-pause",
+		"on-click-middle": "playerctl previous",
+		"on-click-right": "playerctl next"
 	}
 }

@@ -3,6 +3,7 @@
 		"format": "<span color='#73daca'>󰂯</span>",
 		"format-disabled": "<span color='#414868'>󰂲</span>",
 		"format-off": "<span color='#414868'>󰂲</span>",
+		"format-no-controller": "",
 		"format-on": "<span color='#73daca'>󰂰</span>",
 		"format-connected": "<span color='#73daca'>󰂱</span> {device_alias}",
 		"format-connected-battery": "<span color='#73daca'>󰂱</span> {device_alias} {device_battery_percentage}%",

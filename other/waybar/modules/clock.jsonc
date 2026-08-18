@@ -1,9 +1,17 @@
 {
-	"custom/time": {
-		"exec": "~/.config/waybar/scripts/clock.sh",
-		"format": " {}",
-		"interval": 1,
-		"return-type": "json",
-		"tooltip": false
+	"clock": {
+		"interval": 60,
+		"format": "{:%a %b %d  %I:%M %p}",
+		"tooltip-format": "<tt>{calendar}</tt>",
+		"calendar": {
+			"mode": "month",
+			"weeks-pos": "right",
+			"on-scroll": 1
+		},
+		"actions": {
+			"on-click": "mode",
+			"on-scroll-up": "shift_up",
+			"on-scroll-down": "shift_down"
+		}
 	}
 }

@@ -21,7 +21,7 @@
 /* ── temperature ── */
 
 #temperature.warning {
-	color: @warning;
+	color: @peach;
 }
 
 #temperature.critical {

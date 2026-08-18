@@ -1,18 +1,6 @@
-#custom-time {
+#clock {
 	padding: 0 20px;
-	color: @subtext1;
+	color: @text;
 	font-size: 13px;
 	letter-spacing: 0.3px;
-}
-
-#mpris {
-	padding: 0 12px;
-	color: @mauve;
-	font-weight: normal;
-	font-size: 12px;
-}
-
-#mpris:hover {
-	background-color: alpha(@surface0, 0.15);
-	border-radius: 6px;
 }
