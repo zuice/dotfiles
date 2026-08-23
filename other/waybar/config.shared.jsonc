@@ -1,0 +1,59 @@
+{
+	"include": [
+		"~/.config/waybar/modules/hyprland/workspaces.jsonc",
+		"~/.config/waybar/modules/hyprland/window.jsonc",
+		"~/.config/waybar/modules/clock.jsonc",
+		"~/.config/waybar/modules/cpu.jsonc",
+		"~/.config/waybar/modules/memory.jsonc",
+		"~/.config/waybar/modules/temperature.jsonc",
+		"~/.config/waybar/modules/disk.jsonc",
+		"~/.config/waybar/modules/network.jsonc",
+		"~/.config/waybar/modules/bluetooth.jsonc",
+		"~/.config/waybar/modules/pulseaudio.jsonc",
+		"~/.config/waybar/modules/battery.jsonc",
+		"~/.config/waybar/modules/backlight.jsonc",
+		"~/.config/waybar/modules/idle_inhibitor.jsonc",
+		"~/.config/waybar/modules/mpris.jsonc",
+		"~/.config/waybar/modules/custom/swaync.jsonc",
+		"~/.config/waybar/modules/extras/tray.jsonc"
+	],
+
+	"modules-left": [
+		"hyprland/workspaces",
+		"hyprland/window"
+	],
+	"modules-center": [
+		"clock"
+	],
+	"modules-right": [
+		"mpris",
+		"group/hardware",
+		"pulseaudio#output",
+		"backlight",
+		"battery",
+		"network",
+		"bluetooth",
+		"idle_inhibitor",
+		"custom/swaync",
+		"tray"
+	],
+
+	"group/hardware": {
+		"orientation": "inherit",
+		"modules": [
+			"temperature",
+			"cpu",
+			"memory",
+			"disk"
+		]
+	},
+
+	"layer": "top",
+	"position": "top",
+	"height": 0,
+	"width": 0,
+	"margin": 0,
+	"spacing": 0,
+	"mode": "dock",
+	"reload_style_on_change": true
+}
